@@ -13,5 +13,75 @@ Sections:
 	.sdata2     type:rodata align:32
 	.sbss2      type:bss align:4
 
+game/main.c:
+	.text       start:0x80005920 end:0x80005C98
+	.data       start:0x8021B040 end:0x8021B080
+	.sdata      start:0x802BF6E0 end:0x802BF6F0
+	.sbss       start:0x802BFF60 end:0x802BFF80
+	.sdata2     start:0x802C10C0 end:0x802C10C8
+
+game/pad.c:
+	.text       start:0x80005C98 end:0x80006FC8
+	.data       start:0x8021B080 end:0x8021B090
+	.bss        start:0x8024C7A0 end:0x8024C840
+	.sdata      start:0x802BF6F0 end:0x802BF6F8
+	.sbss       start:0x802BFF80 end:0x802C0018
+	.sdata2     start:0x802C10C8 end:0x802C1118
+
+game/dvd.c:
+	.text       start:0x80006FC8 end:0x80007668
+	.data       start:0x8021B090 end:0x8021B1C8
+	.sdata      start:0x802BF6F8 end:0x802BF700
+	.sbss       start:0x802C0018 end:0x802C0020
+
+game/data.c:
+	.text       start:0x80007668 end:0x80009FAC
+	.data       start:0x8021B1C8 end:0x8021CBC0
+	.bss        start:0x8024C840 end:0x8024FA40
+	.sdata      start:0x802BF700 end:0x802BF710
+	.sbss       start:0x802C0020 end:0x802C0030
+
+game/decode.c:
+	.text       start:0x80009FAC end:0x8000A81C
+	.data       start:0x8021CBC0 end:0x8021CC00
+	.bss        start:0x8024FA40 end:0x8024FE40
+	.sdata      start:0x802BF710 end:0x802BF718
+
+game/font.c:
+	.data       start:0x8021CC00 end:0x8021EC00
+
+game/init.c:
+	.text       start:0x8000A81C end:0x8000B1B4
+	.data       start:0x8021EC00 end:0x8021ED50
+	.bss        start:0x8024FE40 end:0x8024FE80
+	.sdata      start:0x802BF718 end:0x802BF730
+	.sbss       start:0x802C0030 end:0x802C0060
+	.sdata2     start:0x802C1118 end:0x802C1128
+
+game/jmp.c:
+	.text       start:0x8000B1B4 end:0x8000B2A8
+
+game/malloc.c:
+	.text       start:0x8000B2A8 end:0x8000B7C0
+	.data       start:0x8021ED50 end:0x8021EDD8
+	.bss        start:0x8024FE80 end:0x8024FE98
+
+game/memory.c:
+	.text       start:0x8000B7C0 end:0x8000C250
+	.data       start:0x8021EDD8 end:0x8021EF80
+
+game/printfunc.c:
+	.text       start:0x8000C250 end:0x8000D804
+	.data       start:0x8021EF80 end:0x8021EFC0
+	.bss        start:0x8024FE98 end:0x80256798
+	.sbss       start:0x802C0060 end:0x802C0070
+	.sdata2     start:0x802C1128 end:0x802C1178
+
+game/process.c:
+	.text       start:0x8000D804 end:0x8000E6A8
+	.data       start:0x8021EFC0 end:0x8021F010
+	.bss        start:0x80256798 end:0x80256890
+	.sbss       start:0x802C0070 end:0x802C0080
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
