@@ -83,5 +83,64 @@ game/process.c:
 	.bss        start:0x80256798 end:0x80256890
 	.sbss       start:0x802C0070 end:0x802C0080
 
+game/sprman.c:
+	.text       start:0x8000E6A8 end:0x800110CC
+	.rodata     start:0x80216060 end:0x80216070
+	.data       start:0x8021F010 end:0x8021F168
+	.bss        start:0x80256890 end:0x8025DC90
+	.sdata      start:0x802BF730 end:0x802BF740
+	.sbss       start:0x802C0080 end:0x802C0090
+	.sdata2     start:0x802C1178 end:0x802C11C8
+
+game/sprput.c:
+	.text       start:0x800110CC end:0x80014600
+	.rodata     start:0x80216070 end:0x80216080
+	.data       start:0x8021F168 end:0x8021F198
+	.bss        start:0x8025DC90 end:0x8025DD10
+	.sbss       start:0x802C0090 end:0x802C0098
+	.sdata2     start:0x802C11C8 end:0x802C1218
+
+game/hsfload.c:
+	.text       start:0x80014600 end:0x80017AF8
+	.data       start:0x8021F198 end:0x8021F208
+	.bss        start:0x8025DD10 end:0x8025E2D0
+	.sbss       start:0x802C0098 end:0x802C00D0
+
+game/hsfdraw.c:
+	.text       start:0x80017AF8 end:0x800249F8
+	.rodata     start:0x80216080 end:0x80216090
+	.data       start:0x8021F208 end:0x8021F4E0
+	.bss        start:0x8025E2D0 end:0x8025FE10
+	.sdata      start:0x802BF740 end:0x802BF758
+	.sbss       start:0x802C00D0 end:0x802C0180
+	.sdata2     start:0x802C1218 end:0x802C12A0
+
+game/hsfman.c:
+	.text       start:0x800249F8 end:0x8002C47C
+	.data       start:0x8021F4E0 end:0x8022A608
+	.bss        start:0x8025FE10 end:0x802624B8
+	.sdata      start:0x802BF758 end:0x802BF760
+	.sbss       start:0x802C0180 end:0x802C01D0
+	.sdata2     start:0x802C12A0 end:0x802C1318
+	.sbss2      start:0x802C50A0 end:0x802C50A8
+
+game/hsfmotion.c:
+	.text       start:0x8002C47C end:0x80030AB0
+	.data       start:0x8022A608 end:0x8022A820
+	.bss        start:0x802624B8 end:0x802630B8
+	.sbss       start:0x802C01D0 end:0x802C01D8
+	.sdata2     start:0x802C1318 end:0x802C1388
+
+game/hsfanim.c:
+	.text       start:0x80030AB0 end:0x8003707C
+	.data       start:0x8022A820 end:0x8022A938
+	.bss        start:0x802630B8 end:0x80265300
+	.sdata2     start:0x802C1388 end:0x802C1458
+
+game/hsfex.c:
+	.text       start:0x8003707C end:0x80039E18
+	.data       start:0x8022A938 end:0x8022A9D8
+	.sdata2     start:0x802C1458 end:0x802C1508
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
