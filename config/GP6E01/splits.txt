@@ -315,5 +315,54 @@ game/sreset.c:
 	.sdata      start:0x802BF898 end:0x802BF8B0
 	.sbss       start:0x802C0468 end:0x802C0488
 
+game/mgtimer.c:
+	.text       start:0x8006E910 end:0x8006FCF8
+	.rodata     start:0x80216108 end:0x80216308
+	.sdata      start:0x802BF8B0 end:0x802BF8B8
+	.sdata2     start:0x802C1AF0 end:0x802C1B20
+
+game/mgscore.c:
+	.text       start:0x8006FCF8 end:0x80070788
+	.rodata     start:0x80216308 end:0x80216338
+	.sdata      start:0x802BF8B8 end:0x802BF8C0
+	.sdata2     start:0x802C1B20 end:0x802C1B30
+
+game/seqman.c:
+	.text       start:0x80070788 end:0x80071E94
+	.data       start:0x8023A1A0 end:0x8023A1B8
+	.bss        start:0x80286518 end:0x80286778
+	.sbss       start:0x802C0488 end:0x802C0498
+	.sdata2     start:0x802C1B30 end:0x802C1B48
+
+game/colman.c:
+	.text       start:0x80071E94 end:0x8007E614
+	.data       start:0x8023A1B8 end:0x8023A260
+	.bss        start:0x80286778 end:0x802868B8
+	.sbss       start:0x802C0498 end:0x802C04A8
+	.sdata2     start:0x802C1B48 end:0x802C1BF8
+
+game/actman.c:
+	.text       start:0x8007E614 end:0x800872E4
+	.data       start:0x8023A260 end:0x8023A2F0
+	.bss        start:0x802868B8 end:0x802868D8
+	.sdata2     start:0x802C1BF8 end:0x802C1D40
+
+game/mggamemes.c:
+	.text       start:0x800872E4 end:0x80091828
+	.data       start:0x8023A2F0 end:0x8023A988
+	.bss        start:0x802868D8 end:0x802870C0
+	.sdata      start:0x802BF8C0 end:0x802BF968
+	.sbss       start:0x802C04A8 end:0x802C04D8
+	.sdata2     start:0x802C1D40 end:0x802C1E48
+
+game/mic.c:
+	.text       start:0x80091828 end:0x8009764C
+	.rodata     start:0x80216338 end:0x80216350
+	.data       start:0x8023A988 end:0x8023ADA8
+	.bss        start:0x802870C0 end:0x80287660
+	.sdata      start:0x802BF968 end:0x802BF9B0
+	.sbss       start:0x802C04D8 end:0x802C0568
+	.sdata2     start:0x802C1E48 end:0x802C1EC8
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
