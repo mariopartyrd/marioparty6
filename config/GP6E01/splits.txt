@@ -233,6 +233,7 @@ game/wipe.c:
 
 game/window.c:
 	.text       start:0x8004C33C end:0x80054DB0
+	.rodata     start:0x802160C8 end:0x802160F8
 	.data       start:0x8022DAA0 end:0x8022E2C8
 	.bss        start:0x80268EC0 end:0x8026E320
 	.sdata      start:0x802BF798 end:0x802BF818
@@ -249,6 +250,70 @@ game/armem.c:
 	.data       start:0x8022E318 end:0x8022E408
 	.bss        start:0x8026E320 end:0x8026EA00
 	.sbss       start:0x802C0390 end:0x802C03A0
+
+game/charman.c:
+	.text       start:0x80056428 end:0x800620C0
+	.data       start:0x8022E408 end:0x8022F6A8
+	.bss        start:0x8026EA00 end:0x8026F898
+	.sdata      start:0x802BF818 end:0x802BF850
+	.sbss       start:0x802C03A0 end:0x802C03B0
+	.sdata2     start:0x802C18A8 end:0x802C1A08
+
+game/mapspace.c:
+	.text       start:0x800620C0 end:0x80065E5C
+	.bss        start:0x8026F898 end:0x8026FD00
+	.sbss       start:0x802C03B0 end:0x802C03D0
+	.sdata2     start:0x802C1A08 end:0x802C1A38
+
+game/THPSimple.c:
+	.text       start:0x80065E5C end:0x80068040
+	.data       start:0x8022F6A8 end:0x8022F7A8
+	.bss        start:0x8026FD00 end:0x802703E0
+	.sdata      start:0x802BF850 end:0x802BF858
+	.sbss       start:0x802C03D0 end:0x802C03F8
+	.sdata2     start:0x802C1A38 end:0x802C1A48
+
+game/THPDraw.c:
+	.text       start:0x80068040 end:0x80068998
+	.sdata2     start:0x802C1A48 end:0x802C1A60
+
+game/thpmain.c:
+	.text       start:0x80068998 end:0x80069A7C
+	.rodata     start:0x802160F8 end:0x80216108
+	.data       start:0x8022F7A8 end:0x8022F810
+	.bss        start:0x802703E0 end:0x80270420
+	.sbss       start:0x802C03F8 end:0x802C0420
+	.sdata2     start:0x802C1A60 end:0x802C1A88
+
+game/mgdata.c:
+	.text       start:0x80069A7C end:0x80069F1C
+	.data       start:0x8022F810 end:0x80232B60
+	.bss        start:0x80270420 end:0x80270B70
+	.sdata      start:0x802BF858 end:0x802BF870
+	.sbss       start:0x802C0420 end:0x802C0450
+	.sdata2     start:0x802C1A88 end:0x802C1AA0
+
+game/objsub.c:
+	.text       start:0x80069F1C end:0x8006A124
+
+game/flag.c:
+	.text       start:0x8006A124 end:0x8006A33C
+	.bss        start:0x80270B70 end:0x80270B80
+
+game/saveload.c:
+	.text       start:0x8006A33C end:0x8006DC84
+	.data       start:0x80232B60 end:0x80232C00
+	.bss        start:0x80270B80 end:0x80285170
+	.sdata      start:0x802BF870 end:0x802BF898
+	.sbss       start:0x802C0450 end:0x802C0468
+	.sdata2     start:0x802C1AA0 end:0x802C1AF0
+
+game/sreset.c:
+	.text       start:0x8006DC84 end:0x8006E910
+	.data       start:0x80232C00 end:0x8023A1A0
+	.bss        start:0x80285170 end:0x80286518
+	.sdata      start:0x802BF898 end:0x802BF8B0
+	.sbss       start:0x802C0468 end:0x802C0488
 
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
