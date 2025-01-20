@@ -200,6 +200,7 @@ cflags_runtime = [
 # REL flags
 cflags_rel = [
     *cflags_base,
+    "-O0,p",
     "-sdata 0",
     "-sdata2 0",
 ]
@@ -211,6 +212,28 @@ cflags_game = [
     "-char unsigned",
     "-fp_contract off",
 ]
+
+# Zlib flags
+cflags_zlib = [
+    *cflags_base,
+    "-O0,p",
+    "-fp_contract off",
+]
+
+
+# Game flags
+cflags_libhu = [
+    *cflags_base,
+    "-O0,p",
+    "-char unsigned",
+    "-fp_contract off",
+]
+
+# Game flags
+cflags_msm = [
+    *cflags_base,
+]
+
 
 config.linker_version = "GC/2.6"
 config.rel_strip_partial = False
@@ -316,7 +339,59 @@ config.libs = [
             Object(NonMatching, "game/actman.c"),
             Object(NonMatching, "game/mggamemes.c"),
             Object(NonMatching, "game/mic.c"),
+            Object(NonMatching, "game/code_80146BA0.c"),
             Object(NonMatching, "game/kerent.c"),
+        ],
+    },
+    {
+        "lib": "libhu",
+        "mw_version": config.linker_version,
+        "cflags": cflags_libhu,
+        "host": False,
+        "objects": [
+            Object(NonMatching, "libhu/setvf.c"),
+            Object(NonMatching, "libhu/subvf.c"),
+        ],
+    },
+    {
+        "lib": "msm",
+        "mw_version": "GC/1.2.5",
+        "cflags": cflags_msm,
+        "host": False,
+        "objects": [
+            Object(NonMatching, "msm/msmsys.c"),
+            Object(NonMatching, "msm/msmmem.c"),
+            Object(NonMatching, "msm/msmfio.c"),
+            Object(NonMatching, "msm/msmmus.c"),
+            Object(NonMatching, "msm/msmse.c"),
+            Object(NonMatching, "msm/msmstream.c"),
+        ],
+    },
+    {
+        "lib": "zlib",
+        "mw_version": config.linker_version,
+        "cflags": cflags_zlib,
+        "host": False,
+        "objects": [
+            Object(NonMatching, "zlib/adler32.c"),
+            Object(NonMatching, "zlib/inflate.c"),
+            Object(NonMatching, "zlib/infblock.c"),
+            Object(NonMatching, "zlib/infcodes.c"),
+            Object(NonMatching, "zlib/infutil.c"),
+            Object(NonMatching, "zlib/inftrees.c"),
+            Object(NonMatching, "zlib/inffast.c"),
+            Object(NonMatching, "zlib/zutil.c"),
+        ],
+    },
+    {
+        "lib": "board",
+        "mw_version": config.linker_version,
+        "cflags": cflags_game,
+        "host": False,
+        "objects": [
+            Object(NonMatching, "board/pausewatch.c"),
+            Object(NonMatching, "board/main.c"),
+            Object(NonMatching, "board/math.c"),
         ],
     },
     {

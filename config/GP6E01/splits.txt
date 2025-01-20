@@ -364,5 +364,93 @@ game/mic.c:
 	.sbss       start:0x802C04D8 end:0x802C0568
 	.sdata2     start:0x802C1E48 end:0x802C1EC8
 
+libhu/setvf.c:
+	.text       start:0x8013EE1C end:0x8013EE2C
+
+libhu/subvf.c:
+	.text       start:0x8013EE2C end:0x8013EE60
+
+msm/msmsys.c:
+	.text       start:0x8013EE60 end:0x801410E0
+	.bss        start:0x802B6218 end:0x802B6728
+	.sdata2     start:0x802C3068 end:0x802C3070
+
+msm/msmmem.c:
+	.text       start:0x801410E0 end:0x80141310
+	.bss        start:0x802B6728 end:0x802B6758
+
+msm/msmfio.c:
+	.text       start:0x80141310 end:0x80141400
+	.bss        start:0x802B6758 end:0x802B6768
+
+msm/msmmus.c:
+	.text       start:0x80141400 end:0x801422B8
+	.bss        start:0x802B6768 end:0x802B68E0
+
+msm/msmse.c:
+	.text       start:0x801422B8 end:0x80143910
+	.bss        start:0x802B68E0 end:0x802B69C0
+	.sdata2     start:0x802C3070 end:0x802C3088
+
+msm/msmstream.c:
+	.text       start:0x80143910 end:0x80146BA0
+	.bss        start:0x802B69C0 end:0x802B6A20
+
+game/code_80146BA0.c:
+	.text       start:0x80146BA0 end:0x80146E2C
+	.data       start:0x80245FC8 end:0x80246068
+	.bss        start:0x802B6A20 end:0x802B6B00
+
+zlib/adler32.c:
+	.text       start:0x80146E2C end:0x80146FD8
+
+zlib/inflate.c:
+	.text       start:0x80146FD8 end:0x80147964
+	.data       start:0x80246068 end:0x80246110
+	.sdata      start:0x802BFB98 end:0x802BFBA0
+
+zlib/infblock.c:
+	.text       start:0x80147964 end:0x80148C4C
+	.rodata     start:0x8021A4B8 end:0x8021A508
+	.data       start:0x80246110 end:0x802461A8
+
+zlib/infcodes.c:
+	.text       start:0x80148C4C end:0x80149790
+	.data       start:0x802461A8 end:0x80246208
+
+zlib/infutil.c:
+	.text       start:0x80149790 end:0x80149928
+	.data       start:0x80246208 end:0x80246250
+
+zlib/inftrees.c:
+	.text       start:0x80149928 end:0x8014A30C
+	.rodata     start:0x8021A508 end:0x8021A720
+	.data       start:0x80246250 end:0x80247438
+	.sdata      start:0x802BFBA0 end:0x802BFBA8
+
+zlib/inffast.c:
+	.text       start:0x8014A30C end:0x8014A8DC
+	.data       start:0x80247438 end:0x80247470
+
+zlib/zutil.c:
+	.text       start:0x8014A8DC end:0x8014A96C
+
+board/pausewatch.c:
+	.text       start:0x8014A96C end:0x8014AB24
+	.sbss       start:0x802C0CD8 end:0x802C0CE8
+
+board/main.c:
+	.text       start:0x8014AB24 end:0x8014C820
+	.data       start:0x80247470 end:0x80247488
+	.sdata      start:0x802BFBA8 end:0x802BFBB8
+	.sbss       start:0x802C0CE8 end:0x802C0D18
+	.sdata2     start:0x802C3088 end:0x802C3098
+
+board/math.c:
+	.text       start:0x8014C820 end:0x8014F264
+	.bss        start:0x802B6B00 end:0x802B6BC0
+	.sbss       start:0x802C0D18 end:0x802C0D20
+	.sdata2     start:0x802C3098 end:0x802C3140
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
