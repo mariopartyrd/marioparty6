@@ -392,6 +392,11 @@ config.libs = [
             Object(NonMatching, "board/pausewatch.c"),
             Object(NonMatching, "board/main.c"),
             Object(NonMatching, "board/math.c"),
+            Object(NonMatching, "board/camera.c"),
+            Object(NonMatching, "board/player.c"),
+            Object(NonMatching, "board/snpc.c"),
+            Object(NonMatching, "board/model.c"),
+            Object(NonMatching, "board/window.c"),
         ],
     },
     {
