@@ -452,5 +452,44 @@ board/math.c:
 	.sbss       start:0x802C0D18 end:0x802C0D20
 	.sdata2     start:0x802C3098 end:0x802C3140
 
+board/camera.c:
+	.text       start:0x8014F264 end:0x801533E4
+	.rodata     start:0x8021A720 end:0x8021A828
+	.data       start:0x80247488 end:0x802474A0
+	.bss        start:0x802B6BC0 end:0x802B8540
+	.sbss       start:0x802C0D20 end:0x802C0D30
+	.sdata2     start:0x802C3140 end:0x802C31A0
+
+board/player.c:
+	.text       start:0x801533E4 end:0x8015F294
+	.rodata     start:0x8021A828 end:0x8021A9F8
+	.data       start:0x802474A0 end:0x80247688
+	.bss        start:0x802B8540 end:0x802B8680
+	.sdata      start:0x802BFBB8 end:0x802BFC20
+	.sbss       start:0x802C0D30 end:0x802C0D50
+	.sdata2     start:0x802C31A0 end:0x802C3270
+
+board/snpc.c:
+	.text       start:0x8015F294 end:0x80168828
+	.rodata     start:0x8021A9F8 end:0x8021AA70
+	.data       start:0x80247688 end:0x80247A58
+	.bss        start:0x802B8680 end:0x802B86C0
+	.sdata      start:0x802BFC20 end:0x802BFC98
+	.sbss       start:0x802C0D50 end:0x802C0D60
+	.sdata2     start:0x802C3270 end:0x802C3428
+
+board/model.c:
+	.text       start:0x80168828 end:0x8016B060
+	.sbss       start:0x802C0D60 end:0x802C0D78
+	.sdata2     start:0x802C3428 end:0x802C3470
+
+board/window.c:
+	.text       start:0x8016B060 end:0x8016E008
+	.rodata     start:0x8021AA70 end:0x8021AA80
+	.data       start:0x80247A58 end:0x80247AF8
+	.bss        start:0x802B86C0 end:0x802B8720
+	.sbss       start:0x802C0D78 end:0x802C0D90
+	.sdata2     start:0x802C3470 end:0x802C34A8
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
