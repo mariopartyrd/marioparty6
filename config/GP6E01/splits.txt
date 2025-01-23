@@ -491,5 +491,56 @@ board/window.c:
 	.sbss       start:0x802C0D78 end:0x802C0D90
 	.sdata2     start:0x802C3470 end:0x802C34A8
 
+board/audio.c:
+	.text       start:0x8016E008 end:0x80170BF8
+	.data       start:0x80247AF8 end:0x80247C00
+	.bss        start:0x802B8720 end:0x802B8D50
+	.sdata      start:0x802BFC98 end:0x802BFCA0
+	.sbss       start:0x802C0D90 end:0x802C0DB0
+	.sdata2     start:0x802C34A8 end:0x802C34C0
+
+board/comchoice.c:
+	.text       start:0x80170BF8 end:0x80171070
+	.sbss       start:0x802C0DB0 end:0x802C0DB8
+
+board/scroll.c:
+	.text       start:0x80171070 end:0x80174EBC
+	.rodata     start:0x8021AA80 end:0x8021AAC0
+	.data       start:0x80247C00 end:0x80247CB8
+	.bss        start:0x802B8D50 end:0x802B9708
+	.sdata      start:0x802BFCA0 end:0x802BFCA8
+	.sbss       start:0x802C0DB8 end:0x802C0DE0
+	.sdata2     start:0x802C34C0 end:0x802C3598
+
+board/masu.c:
+	.text       start:0x80174EBC end:0x8017AC84
+	.rodata     start:0x8021AAC0 end:0x8021AB00
+	.data       start:0x80247CB8 end:0x80247DE0
+	.bss        start:0x802B9708 end:0x802B9E08
+	.sdata      start:0x802BFCA8 end:0x802BFCB8
+	.sbss       start:0x802C0DE0 end:0x802C0E58
+	.sdata2     start:0x802C3598 end:0x802C3628
+
+board/coin.c:
+	.text       start:0x8017AC84 end:0x8017F1D4
+	.rodata     start:0x8021AB00 end:0x8021AB18
+	.data       start:0x80247DE0 end:0x80247F50
+	.bss        start:0x802B9E08 end:0x802BA368
+	.sdata      start:0x802BFCB8 end:0x802BFCC8
+	.sbss       start:0x802C0E58 end:0x802C0E68
+	.sdata2     start:0x802C3628 end:0x802C36E0
+
+board/star.c:
+	.text       start:0x8017F1D4 end:0x80184DD4
+	.rodata     start:0x8021AB18 end:0x8021AB30
+	.data       start:0x80247F50 end:0x80247F90
+	.bss        start:0x802BA368 end:0x802BC2B0
+	.sdata      start:0x802BFCC8 end:0x802BFCD8
+	.sbss       start:0x802C0E68 end:0x802C0EA0
+	.sdata2     start:0x802C36E0 end:0x802C3818
+
+board/padall.c:
+	.text       start:0x80184DD4 end:0x80184EA8
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014

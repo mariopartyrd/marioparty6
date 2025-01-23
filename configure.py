@@ -397,6 +397,12 @@ config.libs = [
             Object(NonMatching, "board/snpc.c"),
             Object(NonMatching, "board/model.c"),
             Object(NonMatching, "board/window.c"),
+            Object(NonMatching, "board/audio.c"),
+            Object(NonMatching, "board/comchoice.c"),
+            Object(NonMatching, "board/scroll.c"),
+            Object(NonMatching, "board/masu.c"),
+            Object(NonMatching, "board/star.c"),
+            Object(NonMatching, "board/padall.c"),
         ],
     },
     {
