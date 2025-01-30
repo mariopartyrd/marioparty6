@@ -641,5 +641,94 @@ board/capsulemain.c:
 	.sbss       start:0x802C0FB0 end:0x802C0FE0
 	.sdata2     start:0x802C4688 end:0x802C48C8
 
+board/shopevent.c:
+	.text       start:0x801E9858 end:0x801EC834
+	.data       start:0x8024B6C8 end:0x8024B7D8
+	.bss        start:0x802BED80 end:0x802BED90
+	.sdata      start:0x802BFE98 end:0x802BFEA0
+	.sbss       start:0x802C0FE0 end:0x802C0FF0
+	.sdata2     start:0x802C48C8 end:0x802C4960
+
+board/guide.c:
+	.text       start:0x801EC834 end:0x801EEA04
+	.rodata     start:0x8021AD58 end:0x8021AD70
+	.data       start:0x8024B7D8 end:0x8024B928
+	.sdata      start:0x802BFEA0 end:0x802BFEC0
+	.sdata2     start:0x802C4960 end:0x802C49E8
+
+board/branch.c:
+	.text       start:0x801EEA04 end:0x801EFAE4
+	.data       start:0x8024B928 end:0x8024B940
+	.bss        start:0x802BED90 end:0x802BEDA0
+	.sbss       start:0x802C0FF0 end:0x802C1000
+	.sdata2     start:0x802C49E8 end:0x802C4A50
+
+board/mgcall.c:
+	.text       start:0x801EFAE4 end:0x801F70E0
+	.rodata     start:0x8021AD70 end:0x8021AEE0
+	.data       start:0x8024B940 end:0x8024BD90
+	.bss        start:0x802BEDA0 end:0x802BEE78
+	.sdata      start:0x802BFEC0 end:0x802BFED8
+	.sbss       start:0x802C1000 end:0x802C1010
+	.sdata2     start:0x802C4A50 end:0x802C4C18
+
+board/effect.c:
+	.text       start:0x801F70E0 end:0x801FA130
+	.data       start:0x8024BD90 end:0x8024BE58
+	.bss        start:0x802BEE78 end:0x802BEF78
+	.sdata      start:0x802BFED8 end:0x802BFEF0
+	.sbss       start:0x802C1010 end:0x802C1020
+	.sdata2     start:0x802C4C18 end:0x802C4CA0
+
+board/pauseconfig.c:
+	.text       start:0x801FA130 end:0x802004EC
+	.rodata     start:0x8021AEE0 end:0x8021AF20
+	.data       start:0x8024BE58 end:0x8024C160
+	.bss        start:0x802BEF78 end:0x802BF1C8
+	.sbss       start:0x802C1020 end:0x802C1050
+	.sdata2     start:0x802C4CA0 end:0x802C4D58
+
+board/gate.c:
+	.text       start:0x802004EC end:0x80201178
+	.rodata     start:0x8021AF20 end:0x8021AF30
+	.bss        start:0x802BF1C8 end:0x802BF1E8
+	.sbss       start:0x802C1050 end:0x802C1058
+	.sdata2     start:0x802C4D58 end:0x802C4D98
+
+board/blast5.c:
+	.text       start:0x80201178 end:0x802035D0
+	.data       start:0x8024C160 end:0x8024C230
+	.sdata      start:0x802BFEF0 end:0x802BFF00
+	.sbss       start:0x802C1058 end:0x802C1060
+	.sdata2     start:0x802C4D98 end:0x802C4E08
+
+board/telop.c:
+	.text       start:0x802035D0 end:0x8020686C
+	.rodata     start:0x8021AF30 end:0x8021AFD8
+	.data       start:0x8024C230 end:0x8024C540
+	.sdata      start:0x802BFF00 end:0x802BFF30
+	.sbss       start:0x802C1060 end:0x802C1078
+	.sdata2     start:0x802C4E08 end:0x802C4E98
+
+board/wipe.c:
+	.text       start:0x8020686C end:0x80209ED0
+	.data       start:0x8024C540 end:0x8024C5E0
+	.bss        start:0x802BF1E8 end:0x802BF220
+	.sdata      start:0x802BFF30 end:0x802BFF40
+	.sdata2     start:0x802C4E98 end:0x802C4F40
+
+board/single.c:
+	.text       start:0x80209ED0 end:0x802137C0
+	.rodata     start:0x8021AFD8 end:0x8021B024
+	.data       start:0x8024C5E0 end:0x8024C790
+	.bss        start:0x802BF220 end:0x802BF6D8
+	.sdata      start:0x802BFF40 end:0x802BFF4F
+	.sbss       start:0x802C1078 end:0x802C10B0
+	.sdata2     start:0x802C4F40 end:0x802C50A0
+	.sbss2      start:0x802C50A8 end:0x802C50AE
+
+board/malloc.c:
+	.text       start:0x802137C0 end:0x80213974
+
 game/kerent.c:
 	.text       start:0x80213974 end:0x80216014
