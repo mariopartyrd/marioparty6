@@ -364,6 +364,268 @@ game/mic.c:
 	.sbss       start:0x802C04D8 end:0x802C0568
 	.sdata2     start:0x802C1E48 end:0x802C1EC8
 
+dolphin/mic/mic.c:
+	.text       start:0x801005A8 end:0x801025C8
+	.data       start:0x80245C50 end:0x80245C90
+	.bss        start:0x802B5E68 end:0x802B5FB8
+	.sbss       start:0x802C0CB0 end:0x802C0CB8
+
+dolphin/mic/m2s.c:
+	.text       start:0x801025C8 end:0x80103318
+	.bss        start:0x802B5FB8 end:0x802B6218
+	.sbss       start:0x802C0CB8 end:0x802C0CD8
+
+gssdk_lib/gsapi/sid/sid.c:
+	.text       start:0x80103318 end:0x801034DC
+
+gssdk_lib/gsapi/callbacks.c:
+	.text       start:0x801034DC end:0x80103CBC
+	.data       start:0x80245C90 end:0x80245CA8
+	.sdata      start:0x802BFB88 end:0x802BFB90
+
+gssdk_lib/gsapi/ctxfuncs.c:
+	.text       start:0x80103CBC end:0x80104680
+
+gssdk_lib/gsapi/extaudio.c:
+	.text       start:0x80104680 end:0x80104748
+
+gssdk_lib/gsapi/gsapi.c:
+	.text       start:0x80104748 end:0x80106C74
+	.rodata     start:0x80216DB8 end:0x80216E00
+	.data       start:0x80245CA8 end:0x80245D58
+	.sdata      start:0x802BFB90 end:0x802BFB98
+
+gssdk_lib/gsapi/mathusage.c:
+	.text       start:0x80106C74 end:0x80106CB0
+	.sdata2     start:0x802C28D0 end:0x802C28D8
+
+gssdk_lib/gsapi/wrddata.c:
+	.text       start:0x80106CB0 end:0x80106DC8
+
+gssdk_lib/asrpho/asrspi.c:
+	.text       start:0x80106DC8 end:0x801091B4
+	.rodata     start:0x80216E00 end:0x80216E38
+	.data       start:0x80245D58 end:0x80245E60
+
+gssdk_lib/asrpho/rec1600/convert.c:
+	.text       start:0x801091B4 end:0x8010A64C
+
+gssdk_lib/asrpho/rec1600/creasp.c:
+	.text       start:0x8010A64C end:0x8010B728
+
+gssdk_lib/asrpho/rec1600/creaspch.c:
+	.text       start:0x8010B728 end:0x8010DDF4
+
+gssdk_lib/asrpho/rec1600/creaspt.c:
+	.text       start:0x8010DDF4 end:0x8010F4E0
+
+gssdk_lib/asrpho/rec1600/creatree.c:
+	.text       start:0x8010F4E0 end:0x80111004
+	.rodata     start:0x80216E38 end:0x80216E70
+	.sdata2     start:0x802C28D8 end:0x802C28F0
+
+gssdk_lib/asrpho/rec1600/ctrl.c:
+	.rodata     start:0x80216E70 end:0x80217E70
+	.sdata2     start:0x802C28F0 end:0x802C2918
+
+gssdk_lib/asrpho/rec1600/initial.c:
+	.rodata     start:0x80217E70 end:0x80218838
+
+gssdk_lib/asrpho/rec1600/crsptrch.c:
+	.text       start:0x80111004 end:0x80113860
+
+gssdk_lib/asrpho/rec1600/spi1600.c:
+	.text       start:0x80113860 end:0x80118FE4
+	.rodata     start:0x80218838 end:0x80218850
+	.data       start:0x80245E60 end:0x80245FC8
+	.sdata2     start:0x802C2918 end:0x802C2988
+
+gssdk_lib/asrpho/rec1600/train.c:
+	.text       start:0x80118FE4 end:0x8011A82C
+	.rodata     start:0x80218850 end:0x80219050
+	.sdata2     start:0x802C2988 end:0x802C29B0
+
+gssdk_lib/asrpho/rec1600/userword.c:
+	.text       start:0x8011A82C end:0x8011C7AC
+	.rodata     start:0x80219050 end:0x80219058
+	.sdata2     start:0x802C29B0 end:0x802C2A08
+
+gssdk_lib/asrpho/common/blocks/delaybl.c:
+	.text       start:0x8011C7AC end:0x8011CB58
+
+gssdk_lib/asrpho/common/blocks/dpgenuw.c:
+	.text       start:0x8011CB58 end:0x8011DE88
+	.sdata2     start:0x802C2A08 end:0x802C2A18
+
+gssdk_lib/asrpho/common/blocks/dpscruw.c:
+	.text       start:0x8011DE88 end:0x8011F03C
+	.sdata2     start:0x802C2A18 end:0x802C2A28
+
+gssdk_lib/asrpho/common/blocks/exev_dp.c:
+	.text       start:0x8011F03C end:0x8011F514
+
+gssdk_lib/asrpho/common/blocks/fft_maye.c:
+	.text       start:0x8011F514 end:0x8011FE04
+	.rodata     start:0x80219058 end:0x802190D8
+	.sdata2     start:0x802C2A28 end:0x802C2A40
+
+gssdk_lib/asrpho/common/blocks/fftmod.c:
+	.text       start:0x8011FE04 end:0x80120A88
+	.sdata2     start:0x802C2A40 end:0x802C2A88
+
+gssdk_lib/asrpho/common/blocks/isoword.c:
+	.text       start:0x80120A88 end:0x80122DF4
+	.sdata2     start:0x802C2A88 end:0x802C2AC8
+
+gssdk_lib/asrpho/common/blocks/nbestdp.c:
+	.text       start:0x80122DF4 end:0x80127EC4
+	.sdata2     start:0x802C2AC8 end:0x802C2AD0
+
+gssdk_lib/asrpho/common/blocks/pitchdp.c:
+	.text       start:0x80127EC4 end:0x80129484
+	.sdata2     start:0x802C2AD0 end:0x802C2B00
+
+gssdk_lib/asrpho/common/blocks/pitchwin.c:
+	.text       start:0x80129484 end:0x80129A48
+	.sdata2     start:0x802C2B00 end:0x802C2B40
+
+gssdk_lib/asrpho/common/blocks/stacker.c:
+	.text       start:0x80129A48 end:0x80129DCC
+
+gssdk_lib/asrpho/common/blocks/undersam.c:
+	.text       start:0x80129DCC end:0x8012A024
+
+gssdk_lib/asrpho/common/blocks/flblocks/acne.c:
+	.text       start:0x8012A024 end:0x8012AC48
+	.rodata     start:0x802190D8 end:0x80219180
+	.sdata2     start:0x802C2B40 end:0x802C2B90
+
+gssdk_lib/asrpho/common/blocks/flblocks/dctlift.c:
+	.text       start:0x8012AC48 end:0x8012B0CC
+	.sdata2     start:0x802C2B90 end:0x802C2BC8
+
+gssdk_lib/asrpho/common/blocks/flblocks/gender.c:
+	.text       start:0x8012B0CC end:0x8012C174
+	.sdata2     start:0x802C2BC8 end:0x802C2C00
+
+gssdk_lib/asrpho/common/blocks/flblocks/logexp.c:
+	.text       start:0x8012C174 end:0x8012C33C
+	.rodata     start:0x80219180 end:0x80219708
+	.sdata2     start:0x802C2C00 end:0x802C2C48
+
+gssdk_lib/asrpho/common/blocks/flblocks/spline.c:
+	.rodata     start:0x80219708 end:0x8021A250
+
+gssdk_lib/asrpho/common/blocks/flblocks/mel.c:
+	.text       start:0x8012C33C end:0x8012CC00
+	.sdata2     start:0x802C2C48 end:0x802C2CA8
+
+gssdk_lib/asrpho/common/blocks/flblocks/mtx.c:
+	.text       start:0x8012CC00 end:0x8012D3FC
+	.sdata2     start:0x802C2CA8 end:0x802C2CD8
+
+gssdk_lib/asrpho/common/blocks/flblocks/mtxopt.c:
+	.text       start:0x8012D3FC end:0x8012D654
+
+gssdk_lib/asrpho/common/blocks/flblocks/smoother.c:
+	.text       start:0x8012D654 end:0x8012DCE8
+	.sdata2     start:0x802C2CD8 end:0x802C2CF0
+
+gssdk_lib/asrpho/common/blocks/flblocks/specsub.c:
+	.text       start:0x8012DCE8 end:0x8012EDE0
+	.sdata2     start:0x802C2CF0 end:0x802C2D30
+
+gssdk_lib/asrpho/common/blocks/flblocks/vad.c:
+	.text       start:0x8012EDE0 end:0x80130C84
+	.sdata2     start:0x802C2D30 end:0x802C2E40
+
+gssdk_lib/asrpho/common/blocks/flblocks/vq1500.c:
+	.text       start:0x80130C84 end:0x80131174
+	.sdata2     start:0x802C2E40 end:0x802C2E48
+
+gssdk_lib/asrpho/common/blocks/flblocks/window.c:
+	.text       start:0x80131174 end:0x80131D70
+	.sdata2     start:0x802C2E48 end:0x802C2E68
+
+gssdk_lib/asrpho/common/blocks/flfxblks/combiner.c:
+	.text       start:0x80131D70 end:0x80132310
+	.sdata2     start:0x802C2E68 end:0x802C2E78
+
+gssdk_lib/asrpho/common/blocks/flfxblks/dist16.c:
+	.text       start:0x80132310 end:0x8013509C
+	.sdata2     start:0x802C2E78 end:0x802C2EC0
+
+gssdk_lib/asrpho/common/blocks/flfxblks/genfilt.c:
+	.text       start:0x8013509C end:0x8013526C
+
+gssdk_lib/asrpho/common/blocks/flfxblks/lkahead.c:
+	.text       start:0x8013526C end:0x80135518
+	.sdata2     start:0x802C2EC0 end:0x802C2EC8
+
+gssdk_lib/asrpho/common/blocks/flfxblks/median.c:
+	.text       start:0x80135518 end:0x80135988
+
+gssdk_lib/asrpho/common/blocks/flfxblks/pitchco.c:
+	.text       start:0x80135988 end:0x80136D80
+	.sdata2     start:0x802C2EC8 end:0x802C2F10
+
+gssdk_lib/asrpho/common/blocks/flfxblks/shs_vuv.c:
+	.text       start:0x80136D80 end:0x8013829C
+	.sdata2     start:0x802C2F10 end:0x802C2F88
+
+gssdk_lib/asrpho/common/blocks/flfxblks/slidhist.c:
+	.text       start:0x8013829C end:0x801387D8
+	.sdata2     start:0x802C2F88 end:0x802C2FB0
+
+gssdk_lib/asrpho/common/blocks/flfxblks/statio.c:
+	.text       start:0x801387D8 end:0x80138B94
+	.sdata2     start:0x802C2FB0 end:0x802C2FC0
+
+gssdk_lib/asrpho/common/blocks/flfxblks/subsamp.c:
+	.text       start:0x80138B94 end:0x8013927C
+	.sdata2     start:0x802C2FC0 end:0x802C2FD8
+
+gssdk_lib/asrpho/common/blocks/flfxblks/trigglr.c:
+	.text       start:0x8013927C end:0x8013A340
+	.sdata2     start:0x802C2FD8 end:0x802C3018
+
+gssdk_lib/asrpho/common/blocks/flfxblks/voicing.c:
+	.text       start:0x8013A340 end:0x8013ABB8
+	.rodata     start:0x8021A250 end:0x8021A308
+	.sdata2     start:0x802C3018 end:0x802C3058
+
+gssdk_lib/asrpho/common/ctxdata/ctxdata.c:
+	.text       start:0x8013ABB8 end:0x8013AD88
+	.rodata     start:0x8021A308 end:0x8021A360
+
+gssdk_lib/asrpho/common/ctxdata/langdata.c:
+	.text       start:0x8013AD88 end:0x8013BA00
+	.rodata     start:0x8021A360 end:0x8021A4A0
+
+gssdk_lib/asrpho/common/tos/mqueue.c:
+	.text       start:0x8013BA00 end:0x8013CA2C
+
+gssdk_lib/asrpho/common/tos/tinyos.c:
+	.text       start:0x8013CA2C end:0x8013E7BC
+	.sdata2     start:0x802C3058 end:0x802C3060
+
+gssdk_lib/asrpho/common/fastallo/fastallo.c:
+	.text       start:0x8013E7BC end:0x8013E9A8
+
+gssdk_lib/common/csspi/csspi.c:
+	.text       start:0x8013E9A8 end:0x8013E9B8
+
+gssdk_lib/common/safeh/safeh.c:
+	.text       start:0x8013E9B8 end:0x8013EA8C
+	.sdata2     start:0x802C3060 end:0x802C3068
+
+gssdk_lib/common/osspi/osspi.c:
+	.text       start:0x8013EA8C end:0x8013EAC4
+
+gssdk_lib/common/rsrc/rsrc.c:
+	.text       start:0x8013EAC4 end:0x8013EE1C
+	.rodata     start:0x8021A4A0 end:0x8021A4B8
+
 libhu/setvf.c:
 	.text       start:0x8013EE1C end:0x8013EE2C
 

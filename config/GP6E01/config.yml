@@ -835,3 +835,22 @@ modules:
   symbols: config/dll/rels/m650dll/symbols.txt
   splits: config/dll/rels/m650dll/splits.txt
   links: []
+
+block_relocations:
+  # False references to HuAudFXPlay
+  - source: .text:0x80106E54
+    end: .text:0x80106F34
+  - source: .text:0x80106F44
+    end: .text:0x80107000
+  - source: .text:0x8010711C
+    end: .text:0x80107124
+  - source: .text:0x801075B0
+    end: .text:0x801075B8
+  - source: .text:0x80107A14
+    end: .text:0x80107A1C
+  - source: .text:0x80107A98
+    end: .text:0x80107AA0
+  - source: .text:0x8010835C
+    end: .text:0x80108364
+  - source: .text:0x801089CC
+    end: .text:0x801089D4
