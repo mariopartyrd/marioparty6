@@ -133,7 +133,7 @@ if args.no_asm:
 
 # Tool versions
 config.binutils_tag = "2.42-1"
-config.compilers_tag = "20231018"
+config.compilers_tag = "20240706"
 config.dtk_tag = "v0.9.2"
 config.sjiswrap_tag = "v1.1.1"
 config.wibo_tag = "0.6.11"
@@ -234,6 +234,16 @@ cflags_msm = [
     *cflags_base,
 ]
 
+
+# Mic SDK flags
+cflags_sdk_mic = [
+    *cflags_base,
+]
+
+# Game Speech SDK flags
+cflags_gssdk = [
+    *cflags_base,
+]
 
 config.linker_version = "GC/2.6"
 config.rel_strip_partial = False
@@ -341,6 +351,89 @@ config.libs = [
             Object(NonMatching, "game/mic.c"),
             Object(NonMatching, "game/code_80146BA0.c"),
             Object(NonMatching, "game/kerent.c"),
+        ],
+    },
+    {
+        "lib": "sdk_mic",
+        "mw_version": config.linker_version,
+        "cflags": cflags_sdk_mic,
+        "host": False,
+        "objects": [
+            Object(NonMatching, "dolphin/mic/mic.c"),
+            Object(NonMatching, "dolphin/mic/m2s.c"),
+        ],
+    },
+    {
+        "lib": "gssdk",
+        "mw_version": config.linker_version,
+        "cflags": cflags_gssdk,
+        "host": False,
+        "objects": [
+            Object(NonMatching, "gssdk_lib/gsapi/sid/sid.c"),
+            Object(NonMatching, "gssdk_lib/gsapi/callbacks.c"),
+            Object(NonMatching, "gssdk_lib/gsapi/ctxfuncs.c"),
+            Object(NonMatching, "gssdk_lib/gsapi/extaudio.c"),
+            Object(NonMatching, "gssdk_lib/gsapi/gsapi.c"),
+            Object(NonMatching, "gssdk_lib/gsapi/mathusage.c"),
+            Object(NonMatching, "gssdk_lib/gsapi/wrddata.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/asrspi.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/convert.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/creasp.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/creaspch.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/creaspt.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/creatree.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/crsptrch.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/ctrl.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/initial.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/spi1600.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/train.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/rec1600/userword.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/delaybl.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/dpgenuw.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/dpscruw.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/exev_dp.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/fft_maye.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/fftmod.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/isoword.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/nbestdp.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/pitchdp.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/pitchwin.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/stacker.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/undersam.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/acne.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/dctlift.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/gender.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/logexp.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/mel.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/mtx.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/mtxopt.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/smoother.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/spline.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/specsub.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/vad.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/vq1500.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flblocks/window.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/combiner.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/dist16.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/genfilt.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/lkahead.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/median.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/pitchco.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/shs_vuv.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/slidhist.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/statio.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/subsamp.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/trigglr.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/blocks/flfxblks/voicing.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/ctxdata/ctxdata.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/ctxdata/langdata.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/tos/mqueue.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/tos/tinyos.c"),
+            Object(NonMatching, "gssdk_lib/asrpho/common/fastallo/fastallo.c"),
+            Object(NonMatching, "gssdk_lib/common/csspi/csspi.c"),
+            Object(NonMatching, "gssdk_lib/common/safeh/safeh.c"),
+            Object(NonMatching, "gssdk_lib/common/osspi/osspi.c"),
+            Object(NonMatching, "gssdk_lib/common/rsrc/rsrc.c"),
         ],
     },
     {
