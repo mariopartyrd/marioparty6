@@ -364,6 +364,10 @@ game/mic.c:
 	.sbss       start:0x802C04D8 end:0x802C0568
 	.sdata2     start:0x802C1E48 end:0x802C1EC8
 
+Runtime.PPCEABI.H/runtime.c:
+	.text       start:0x800EE178 end:0x800EE854
+	.rodata     start:0x802166E8 end:0x80216700
+
 dolphin/mic/mic.c:
 	.text       start:0x801005A8 end:0x801025C8
 	.data       start:0x80245C50 end:0x80245C90

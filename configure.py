@@ -201,6 +201,8 @@ cflags_runtime = [
 cflags_rel = [
     *cflags_base,
     "-O0,p",
+    "-char unsigned",
+    "-fp_contract off",
     "-sdata 0",
     "-sdata2 0",
 ]
@@ -284,6 +286,7 @@ config.libs = [
         "cflags": cflags_runtime,
         "host": False,
         "objects": [
+            Object(NonMatching, "Runtime.PPCEABI.H/runtime.c"),
             Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
             Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
         ],
@@ -531,8 +534,22 @@ config.libs = [
         "host": False,
         "objects": [
             Object(Matching, "REL/empty.c"),  # Must be marked as matching
+            Object(
+                NonMatching,
+                "REL/runtime.c",
+                source="Runtime.PPCEABI.H/runtime.c",
+            ),
         ],
     },
+    Rel(
+        "bootDll",
+        objects={
+            Object(NonMatching, "REL/bootDll/boot.c"),
+            Object(NonMatching, "REL/bootDll/data.c"),
+            Object(NonMatching, "REL/bootDll/opening.c"),
+        },
+    ),
+
 ]
 
 if args.mode == "configure":

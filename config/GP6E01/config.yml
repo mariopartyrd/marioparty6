@@ -427,6 +427,16 @@ modules:
   symbols: config/dll/rels/bootDll/symbols.txt
   splits: config/dll/rels/bootDll/splits.txt
   links: []
+  extract:
+  - symbol: nintendoData
+    binary: nintendoData.bin
+    header: nintendoData.inc
+  - symbol: warningData
+    binary: warningData.bin
+    header: warningData.inc
+  - symbol: warningPressStartData
+    binary: warningPressStartData.bin
+    header: warningPressStartData.inc
 
 - object: orig/GP6E01/files/dll/m604DLL.rel
   hash: 227c25eafd5f444e52629f77b6c10f352453429b
@@ -739,6 +749,7 @@ modules:
   symbols: config/dll/rels/m601Dll/symbols.txt
   splits: config/dll/rels/m601Dll/splits.txt
   links: []
+
 
 - object: orig/GP6E01/files/dll/m623DLL.rel
   hash: 0e6f879c946b278994b90ce75e4186f4ad8b38cb
