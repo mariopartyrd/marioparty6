@@ -5,3 +5,22 @@ Sections:
 	.rodata     type:rodata align:32
 	.data       type:data align:32
 	.bss        type:bss align:8
+
+REL/bootDll/boot.c:
+	.text       start:0x00000000 end:0x00002DA4
+	.rodata     start:0x00000000 end:0x000000D0
+	.data       start:0x00000000 end:0x00000040
+	.bss        start:0x00000000 end:0x00000058
+
+REL/bootDll/data.c:
+	.data       start:0x00000040 end:0x00008650
+
+REL/bootDll/opening.c:
+	.text       start:0x00002DA4 end:0x000080BC
+	.rodata     start:0x000000D0 end:0x00000290
+	.data       start:0x00008650 end:0x000089B9
+	.bss        start:0x00000058 end:0x00000236
+
+REL/runtime.c:
+	.text       start:0x000080BC end:0x00008B00
+	.rodata     start:0x00000290 end:0x000002A8
