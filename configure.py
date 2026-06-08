@@ -238,6 +238,12 @@ cflags_msm = [
 
 
 # Mic SDK flags
+cflags_dolphin = [
+    *cflags_base,
+]
+
+
+# Mic SDK flags
 cflags_sdk_mic = [
     *cflags_base,
 ]
@@ -256,7 +262,7 @@ def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
         "mw_version": "GC/1.2.5n",
-        "cflags": cflags_base,
+        "cflags": cflags_dolphin,
         "host": False,
         "objects": objects,
     }
@@ -356,6 +362,89 @@ config.libs = [
             Object(NonMatching, "game/kerent.c"),
         ],
     },
+    DolphinLib(
+        "base",
+        [
+            Object(NonMatching, "dolphin/base/PPCArch.c"),
+        ],
+    ),
+    DolphinLib(
+        "os",
+        [
+            Object(NonMatching, "dolphin/os/OS.c"),
+            Object(NonMatching, "dolphin/os/OSAlarm.c"),
+            Object(NonMatching, "dolphin/os/OSAlloc.c"),
+            Object(NonMatching, "dolphin/os/OSArena.c"),
+            Object(NonMatching, "dolphin/os/OSAudioSystem.c"),
+            Object(NonMatching, "dolphin/os/OSCache.c"),
+            Object(NonMatching, "dolphin/os/OSContext.c"),
+            Object(NonMatching, "dolphin/os/OSError.c"),
+            Object(NonMatching, "dolphin/os/OSExec.c"),
+            Object(NonMatching, "dolphin/os/OSFont.c"),
+            Object(NonMatching, "dolphin/os/OSInterrupt.c"),
+            Object(NonMatching, "dolphin/os/OSLink.c"),
+            Object(NonMatching, "dolphin/os/OSMessage.c"),
+            Object(NonMatching, "dolphin/os/OSMemory.c"),
+            Object(NonMatching, "dolphin/os/OSMutex.c"),
+            Object(NonMatching, "dolphin/os/OSReboot.c"),
+            Object(NonMatching, "dolphin/os/OSReset.c"),
+            Object(NonMatching, "dolphin/os/OSResetSW.c"),
+            Object(NonMatching, "dolphin/os/OSRtc.c"),
+            Object(NonMatching, "dolphin/os/OSSemaphore.c"),
+            Object(NonMatching, "dolphin/os/OSStopwatch.c"),
+            Object(NonMatching, "dolphin/os/OSSync.c"),
+            Object(NonMatching, "dolphin/os/OSThread.c"),
+            Object(NonMatching, "dolphin/os/OSTime.c"),
+            Object(NonMatching, "dolphin/os/__start.c"),
+            Object(NonMatching, "dolphin/os/__ppc_eabi_init.c"),
+        ],
+    ),
+    DolphinLib(
+        "db",
+        [
+            Object(NonMatching, "dolphin/db/db.c"),
+        ],
+    ),
+    DolphinLib(
+        "mtx",
+        [
+            Object(NonMatching, "dolphin/mtx/mtx.c"),
+            Object(NonMatching, "dolphin/mtx/mtxvec.c"),
+            Object(NonMatching, "dolphin/mtx/mtx44.c"),
+            Object(NonMatching, "dolphin/mtx/mtx44vec.c"),
+            Object(NonMatching, "dolphin/mtx/vec.c"),
+            Object(NonMatching, "dolphin/mtx/quat.c"),
+            Object(NonMatching, "dolphin/mtx/psmtx.c"),
+        ],
+    ),
+    DolphinLib(
+        "dvd",
+        [
+            Object(NonMatching, "dolphin/dvd/dvdlow.c"),
+            Object(NonMatching, "dolphin/dvd/dvdfs.c"),
+            Object(NonMatching, "dolphin/dvd/dvd.c"),
+            Object(NonMatching, "dolphin/dvd/dvdqueue.c"),
+            Object(NonMatching, "dolphin/dvd/dvderror.c"),
+            Object(NonMatching, "dolphin/dvd/dvdidutils.c"),
+            Object(NonMatching, "dolphin/dvd/dvdFatal.c"),
+            Object(NonMatching, "dolphin/dvd/fstload.c"),
+        ],
+    ),
+    DolphinLib(
+        "vi",
+        [
+            Object(NonMatching, "dolphin/vi/vi.c"),
+        ],
+    ),
+    DolphinLib(
+        "demo",
+        [
+            Object(NonMatching, "dolphin/demo/DEMOInit.c"),
+            Object(NonMatching, "dolphin/demo/DEMOFont.c"),
+            Object(NonMatching, "dolphin/demo/DEMOPuts.c"),
+            Object(NonMatching, "dolphin/demo/DEMOStats.c"),
+        ],
+    ),
     {
         "lib": "sdk_mic",
         "mw_version": config.linker_version,
