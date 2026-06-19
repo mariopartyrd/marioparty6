@@ -1124,11 +1124,11 @@ zlib/inffast.c:
 zlib/zutil.c:
 	.text       start:0x8014A8DC end:0x8014A96C
 
-board/pausewatch.c:
+board/exit.c:
 	.text       start:0x8014A96C end:0x8014AB24
 	.sbss       start:0x802C0CD8 end:0x802C0CE8
 
-board/main.c:
+board/board.c:
 	.text       start:0x8014AB24 end:0x8014C820
 	.data       start:0x80247470 end:0x80247488
 	.sdata      start:0x802BFBA8 end:0x802BFBB8
@@ -1167,7 +1167,7 @@ board/snpc.c:
 	.sbss       start:0x802C0D50 end:0x802C0D60
 	.sdata2     start:0x802C3270 end:0x802C3428
 
-board/model.c:
+board/object.c:
 	.text       start:0x80168828 end:0x8016B060
 	.sbss       start:0x802C0D60 end:0x802C0D78
 	.sdata2     start:0x802C3428 end:0x802C3470
@@ -1231,7 +1231,7 @@ board/star.c:
 board/padall.c:
 	.text       start:0x80184DD4 end:0x80184EA8
 
-board/sai.c:
+board/dice.c:
 	.text       start:0x80184EA8 end:0x8018B238
 	.rodata     start:0x8021AB30 end:0x8021AC18
 	.data       start:0x80247F90 end:0x802481B0
@@ -1282,31 +1282,31 @@ board/roulette.c:
 	.sbss       start:0x802C0F18 end:0x802C0F38
 	.sdata2     start:0x802C3BC8 end:0x802C3C60
 
-board/capsulesel.c:
+board/capselect.c:
 	.text       start:0x80198094 end:0x8019B4F4
 	.data       start:0x80248BF8 end:0x80248C08
 	.bss        start:0x802BD100 end:0x802BD170
 	.sbss       start:0x802C0F38 end:0x802C0F48
 	.sdata2     start:0x802C3C60 end:0x802C3D20
 
-board/capsule0.c:
+board/capmove.c:
 	.text       start:0x8019B4F4 end:0x801A245C
 	.data       start:0x80248C08 end:0x80248D38
 	.sdata2     start:0x802C3D20 end:0x802C3EE0
 
-board/capsule1.c:
+board/capthrow.c:
 	.text       start:0x801A245C end:0x801AB10C
 	.data       start:0x80248D38 end:0x80248E48
 	.sdata      start:0x802BFD18 end:0x802BFD28
 	.sdata2     start:0x802C3EE0 end:0x802C4100
 
-board/capsule2.c:
+board/captrap.c:
 	.text       start:0x801AB10C end:0x801B1B4C
 	.data       start:0x80248E48 end:0x80248E90
 	.bss        start:0x802BD170 end:0x802BD190
 	.sdata2     start:0x802C4100 end:0x802C4288
 
-board/capsule3.c:
+board/capspecial.c:
 	.text       start:0x801B1B4C end:0x801C0290
 	.data       start:0x80248E90 end:0x80249400
 	.bss        start:0x802BD190 end:0x802BD1D0
@@ -1322,7 +1322,7 @@ board/capsule.c:
 	.sbss       start:0x802C0F60 end:0x802C0FB0
 	.sdata2     start:0x802C44B8 end:0x802C4688
 
-board/capsulemain.c:
+board/capevent.c:
 	.text       start:0x801D495C end:0x801E9858
 	.data       start:0x8024ADD0 end:0x8024B6C8
 	.bss        start:0x802BEBA0 end:0x802BED80
@@ -1369,7 +1369,7 @@ board/effect.c:
 	.sbss       start:0x802C1010 end:0x802C1020
 	.sdata2     start:0x802C4C18 end:0x802C4CA0
 
-board/pauseconfig.c:
+board/config.c:
 	.text       start:0x801FA130 end:0x802004EC
 	.rodata     start:0x8021AEE0 end:0x8021AF20
 	.data       start:0x8024BE58 end:0x8024C160
@@ -1384,7 +1384,7 @@ board/gate.c:
 	.sbss       start:0x802C1050 end:0x802C1058
 	.sdata2     start:0x802C4D58 end:0x802C4D98
 
-board/blast5.c:
+board/last5.c:
 	.text       start:0x80201178 end:0x802035D0
 	.data       start:0x8024C160 end:0x8024C230
 	.sdata      start:0x802BFEF0 end:0x802BFF00
