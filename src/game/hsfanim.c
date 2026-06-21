@@ -1383,21 +1383,21 @@ void Hu3DWaterCreate(s16 layerNo, void *animBump, void *animSurface, void *animS
     waterP->fbWaterW = fbWaterW;
     waterP->fbWaterH = fbWaterH;
     if(animBump == HU3D_WATER_ANIM_NONE) {
-        waterP->animBump = HuSprAnimDataRead(EFFECT_ANM_waterBump);
+        waterP->animBump = HuSprAnimDataRead(EFFECT_ANM_water_bump);
     } else if(animBump) {
         waterP->animBump = HuSprAnimRead(animBump);
     } else {
         waterP->animBump = animBump;
     }
     if(animSurface == HU3D_WATER_ANIM_NONE) {
-        waterP->animSurface = HuSprAnimDataRead(EFFECT_ANM_waterSurface);
+        waterP->animSurface = HuSprAnimDataRead(EFFECT_ANM_water_surface);
     } else if(animSurface) {
         waterP->animSurface = HuSprAnimRead(animSurface);
     } else {
         waterP->animSurface = animSurface;
     }
     if(animSky == HU3D_WATER_ANIM_NONE) {
-        waterP->animSky = HuSprAnimDataRead(EFFECT_ANM_waterSky);
+        waterP->animSky = HuSprAnimDataRead(EFFECT_ANM_water_sky);
     } else if(animSky) {
         waterP->animSky = HuSprAnimRead(animSky);
     } else {
@@ -1498,7 +1498,7 @@ void Hu3DWaterWaveCreate(HuVecF *pos, float radius, float radiusMax)
     s16 i;
     s16 j;
     if(!waterP->animWave) {
-        waterP->animWave = HuSprAnimDataRead(EFFECT_ANM_waterWave);
+        waterP->animWave = HuSprAnimDataRead(EFFECT_ANM_water_wave);
         HuDataDirClose(DATA_effect);
     }
     for(i=0; i<HU3D_WAVE_MAX; i++) {
