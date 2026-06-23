@@ -6,6 +6,7 @@ splits: config/GP6E01/splits.txt
 # Change this to match the linker verison.
 # See config.example.yml for a list.
 mw_comment_version: 11
+force_active: [__register_global_object, GwLanguageSave, _kerent]
 
 modules:
 - object: orig/GP6E01/files/dll/m699Dll.rel
