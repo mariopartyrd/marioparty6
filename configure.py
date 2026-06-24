@@ -178,6 +178,7 @@ cflags_base = [
     "-multibyte",  # For Wii compilers, replace with `-enc SJIS`
     "-i include",
     f"-i build/{config.version}/include",
+    "-DMUSY_TARGET=MUSY_TARGET_DOLPHIN",
     f"-DVERSION={version_num}",
 ]
 
@@ -334,7 +335,7 @@ config.libs = [
             Object(Matching, "game/objsysobj.c"),
             Object(Matching, "game/objdll.c"),
             Object(Matching, "game/frand.c"),
-            Object(NonMatching, "game/audio.c"),
+            Object(Matching, "game/audio.c"),
             Object(Matching, "game/EnvelopeExec.c"),
             Object(NonMatching, "game/gamemes.c"),
             Object(Matching, "game/esprite.c"),
