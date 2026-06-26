@@ -186,7 +186,7 @@ static inline void GWLanguageSet(int languageNo)
     GwCommon.languageNo = languageNo;
 }
 
-static inline int GWLanguageGet(int languageNo)
+static inline int GWLanguageGet(void)
 {
     return GwCommon.languageNo;
 }

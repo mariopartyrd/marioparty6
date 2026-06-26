@@ -18,6 +18,8 @@
 
 #define GW_MG_PLAY_NUM_MAX 10000
 
+#include "game/window_enum.h"
+
 typedef enum {
     GW_BANK_FLAG_MAX = 63
 } GW_BANK_FLAG;

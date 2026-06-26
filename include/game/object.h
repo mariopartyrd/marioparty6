@@ -169,5 +169,4 @@ extern float CZoom;
 extern HuVecF Center;
 extern HuVecF CRot;
 
-
 #endif
