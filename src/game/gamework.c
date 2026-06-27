@@ -18,8 +18,8 @@ static u16 SingleMgRecordNum;
 static u16 MgPlayNum;
 s16 GwMgNightF;
 
-s16 GwLanguage = 1; //HUWIN_LANG_ENGLISH
-s16 GwLanguageSave = -1;
+s16 GwLanguage = HUWIN_LANG_ENGLISH;
+s16 GwLanguageSave = HUWIN_LANG_NULL;
 
 void GWInit(void)
 {
