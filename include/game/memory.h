@@ -25,6 +25,7 @@ void *HuMemDirectMalloc(HEAPID heap, s32 size);
 void *HuMemDirectMallocNum(HEAPID heap, s32 size, u32 num);
 void *HuMemDirectTailMalloc(HEAPID heap, s32 size);
 void *HuMemDirectTailMallocNum(HEAPID heap, s32 size, u32 num);
+void *HuMemDirectRealloc(HEAPID heap, void *ptr, s32 size);
 
 void HuMemDirectFree(void *ptr);
 void HuMemDirectFreeNum(HEAPID heap, u32 num);

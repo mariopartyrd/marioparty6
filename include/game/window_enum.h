@@ -8,7 +8,8 @@ typedef enum {
     HUWIN_LANG_GERMANY, //2
     HUWIN_LANG_FRANCE, //3
     HUWIN_LANG_ITALY, //4
-    HUWIN_LANG_SPAIN //5
+    HUWIN_LANG_SPAIN, //5
+    HUWIN_LANG_MAX, //6
 } HUWIN_LANG;
 
 typedef enum {

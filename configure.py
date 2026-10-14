@@ -363,7 +363,7 @@ config.libs = [
             Object(NonMatching, "game/colman.c"),
             Object(NonMatching, "game/actman.c"),
             Object(NonMatching, "game/mggamemes.c"),
-            Object(NonMatching, "game/mic.c"),
+            Object(Matching, "game/mic.c"),
             Object(NonMatching, "game/code_80146BA0.c"),
             Object(NonMatching, "game/kerent.c"),
         ],

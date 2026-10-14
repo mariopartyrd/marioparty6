@@ -32,6 +32,8 @@ typedef void (*OSErrorHandler)( OSError error, OSContext* context, ... );
 
 OSErrorHandler OSSetErrorHandler(OSError code, OSErrorHandler handler);
 
+extern u32 __OSFpscrEnableBits;
+
 #ifdef __cplusplus
 }
 #endif

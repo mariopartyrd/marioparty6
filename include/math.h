@@ -71,7 +71,7 @@ double fmod(double x, double y);
 double log(double x);
 double pow(double x, double y);
 float tanf(float x);
-
+double log10(double x);
 
 extern inline double fabs(double x)
 {
@@ -104,5 +104,6 @@ _MATH_INLINE float fmodf(float x, float m) { return (float)fmod((double)x, (doub
 _MATH_INLINE float floorf(float x) { return floor(x); }
 
 _MATH_INLINE float powf(float __x, float __y) { return pow(__x, __y); }
+
 
 #endif
