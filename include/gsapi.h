@@ -112,18 +112,18 @@ s32 gsapi_EngineSessionDataExport(GSAPI_HENGINE hEngine, GSAPI_SESSIONDATA **ppS
 s32 gsapi_EngineStart(GSAPI_HENGINE hEngine);
 s32 gsapi_EngineRestart(GSAPI_HENGINE hEngine);
 s32 gsapi_EngineStop(GSAPI_HENGINE hEngine);
-s32 gsapi_EngineGetWordString(GSAPI_HENGINE hEngine, u32 WordId, char **WordString);
+s32 gsapi_GetResultString(GSAPI_HENGINE hEngine, u32 WordId, char **pszResult);
 
 s32 gsapi_LanguageLoadBuffer(const u32 *pu32LngData, const u32 *pu32GcdData);
 s32 gsapi_LanguageUnLoad();
 
 s32 gsapi_ContextActivate(GSAPI_HENGINE hEngine, GSAPI_HCONTEXT hContext);
-s32 gsapi_ContextOpen(const u32 *pu32CtxData, GSAPI_HCONTEXT phContext);
+s32 gsapi_ContextLoadBuffer(const u32 *pu32CtxData, GSAPI_HCONTEXT phContext);
 s32 gsapi_ContextSetGcdData(GSAPI_HCONTEXT hContext, const u32 *pu32GcdData);
 s32 gsapi_ContextSetWrdData(GSAPI_HCONTEXT hContext, const u32 *pu32WrdData);
 s32 gsapi_ContextSetParam(GSAPI_HCONTEXT hContext, GSAPI_PARAMID ParamId, u32 Value);
-s32 gsapi_ContextDeActivate(GSAPI_HCONTEXT hContext);
-s32 gsapi_SetHeapUserData(u32 u32HeapUserData);
+s32 gsapi_ContextUnLoad(GSAPI_HCONTEXT hContext);
+s32 gsapi_SetHeapUserData(u32 u32UserData);
 
 
 #endif

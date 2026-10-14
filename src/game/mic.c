@@ -358,7 +358,7 @@ HUMC_CONTEXTID HuMCContextCreate(char *path)
     ctx->pWrdData = MCDVDRead(file);
     file = MakeMCFilename(strBuf, ".bin");
     ctx->pBinData = MCDVDRead(file);
-    result = gsapi_ContextOpen(ctx->pCtxData, &ctx->hContext);
+    result = gsapi_ContextLoadBuffer(ctx->pCtxData, &ctx->hContext);
     if(result != 0) {
         OSReport("Error CTX %x\n", result);
     }
@@ -392,7 +392,7 @@ void HuMCContextKill(HUMC_CONTEXTID ctxId)
     if(ctxId >= 0) {
         ctx = &MCContextData[ctxId];
         if(ctx->hContext) {
-            gsapi_ContextDeActivate(ctx->hContext);
+            gsapi_ContextUnLoad(ctx->hContext);
             HuMemDirectFree(ctx->pCtxData);
             HuMemDirectFree(ctx->pGcdData);
             HuMemDirectFree(ctx->pWrdData);
@@ -1742,7 +1742,7 @@ static void MicResultExec(GSAPI_HENGINE hEngine, u32 Action, GSAPI_RESULT *pResu
     s16 j; //r29
     s16 *respResult; //r27
     HUMC_RESPONSE_WORD words[HUMC_RESPONSE_WORD_MAX]; //sp+0xC
-    char *wordStr; //sp+0x8
+    char *szResult; //sp+0x8
     
     result = pResult;
     if(pResult->u16NbrWords != 0) {
@@ -1758,8 +1758,8 @@ static void MicResultExec(GSAPI_HENGINE hEngine, u32 Action, GSAPI_RESULT *pResu
                 respResult = &MCResultData[MCResultNum];
                 for(j=1; j<pResult->u16NbrWords-1; j++) {
                     MCResultData[MCResultNum++] = MicMapWord(result->pWordIds[j]);
-                    gsapi_EngineGetWordString(MC_gsapiEngine, result->pWordIds[j], &wordStr);
-                    OSReport("%d:%d(%d),%s\n", i, MicMapWord(result->pWordIds[j]), result->u16Conf, wordStr);
+                    gsapi_GetResultString(MC_gsapiEngine, result->pWordIds[j], &szResult);
+                    OSReport("%d:%d(%d),%s\n", i, MicMapWord(result->pWordIds[j]), result->u16Conf, szResult);
                 }
                 words[i].conf = result->u16Conf;
                 words[i].nbrWords = -2+result->u16NbrWords;
